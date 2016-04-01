@@ -262,6 +262,22 @@ public:
     }
 
 
+    inline void enableResetNetworkOnCloudError()
+    {
+        set_flag(SYSTEM_FLAG_RESET_NETWORK_ON_CLOUD_ERROR, true);
+    }
+
+    inline void disableResetNetworkOnCloudError()
+    {
+        set_flag(SYSTEM_FLAG_RESET_NETWORK_ON_CLOUD_ERROR, false);
+    }
+
+    inline uint8_t resetNetworkOnCloudErrorEnabled()
+    {
+        return get_flag(SYSTEM_FLAG_RESET_NETWORK_ON_CLOUD_ERROR) != 0;
+    }
+
+
 private:
 
     inline uint8_t get_flag(system_flag_t flag)

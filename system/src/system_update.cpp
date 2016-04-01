@@ -61,13 +61,15 @@ static_assert(SYSTEM_FLAG_RESET_PENDING==2, "system flag value");
 static_assert(SYSTEM_FLAG_RESET_ENABLED==3, "system flag value");
 static_assert(SYSTEM_FLAG_STARTUP_SAFE_LISTEN_MODE == 4, "system flag value");
 static_assert(SYSTEM_FLAG_WIFITESTER_OVER_SERIAL1 == 5, "system flag value");
-static_assert(SYSTEM_FLAG_MAX == 6, "system flag max value");
+static_assert(SYSTEM_FLAG_RESET_NETWORK_ON_CLOUD_ERROR == 6, "system flag value");
+static_assert(SYSTEM_FLAG_MAX == 7, "system flag max value");
 
 volatile uint8_t systemFlags[SYSTEM_FLAG_MAX] = {
     0, 1, // OTA updates pending/enabled
     0, 1, // Reset pending/enabled
     0,    // SYSTEM_FLAG_STARTUP_SAFE_LISTEN_MODE,
 	0,	  // SYSTEM_FLAG_SETUP_OVER_SERIAL1
+    1     // SYSTEM_FLAG_RESET_NETWORK_ON_CLOUD_ERROR
 };
 
 const uint16_t SAFE_MODE_LISTEN = 0x5A1B;
