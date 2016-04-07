@@ -262,19 +262,19 @@ public:
     }
 
 
-    inline void enableResetNetworkOnCloudError()
+    inline void enableResetNetworkOnCloudErrors()
     {
-        set_flag(SYSTEM_FLAG_RESET_NETWORK_ON_CLOUD_ERROR, true);
+        set_flag(SYSTEM_FLAG_RESET_NETWORK_ON_CLOUD_ERRORS, true);
     }
 
-    inline void disableResetNetworkOnCloudError()
+    inline void disableResetNetworkOnCloudErrors()
     {
-        set_flag(SYSTEM_FLAG_RESET_NETWORK_ON_CLOUD_ERROR, false);
+        set_flag(SYSTEM_FLAG_RESET_NETWORK_ON_CLOUD_ERRORS, false);
     }
 
-    inline uint8_t resetNetworkOnCloudErrorEnabled()
+    inline uint8_t resetNetworkOnCloudErrorsEnabled()
     {
-        return get_flag(SYSTEM_FLAG_RESET_NETWORK_ON_CLOUD_ERROR) != 0;
+        return get_flag(SYSTEM_FLAG_RESET_NETWORK_ON_CLOUD_ERRORS) != 0;
     }
 
 

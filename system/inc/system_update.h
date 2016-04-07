@@ -119,7 +119,7 @@ typedef enum
      * When 1 (default), the system resets network connection after a number of failed attempts to
      * connect to the cloud.
      */
-    SYSTEM_FLAG_RESET_NETWORK_ON_CLOUD_ERROR,
+    SYSTEM_FLAG_RESET_NETWORK_ON_CLOUD_ERRORS,
 
     SYSTEM_FLAG_MAX
 

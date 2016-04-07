@@ -169,7 +169,7 @@ void handle_cfod()
         ++cfod_count;
 
     uint8_t reset = 0;
-    system_get_flag(SYSTEM_FLAG_RESET_NETWORK_ON_CLOUD_ERROR, &reset, nullptr);
+    system_get_flag(SYSTEM_FLAG_RESET_NETWORK_ON_CLOUD_ERRORS, &reset, nullptr);
     if (reset && cfod_count >= MAX_FAILED_CONNECTS)
     {
         SPARK_WLAN_RESET = RESET_ON_CFOD;
