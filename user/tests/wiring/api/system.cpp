@@ -175,8 +175,8 @@ test(system_flags)
     API_COMPILE(System.resetEnabled());
     // SYSTEM_FLAG_RESET_PENDING
     API_COMPILE(System.resetPending());
-    // SYSTEM_FLAG_RESET_NETWORK_ON_CLOUD_ERRORS
-    API_COMPILE(System.enableResetNetworkOnCloudErrors());
-    API_COMPILE(System.disableResetNetworkOnCloudErrors());
-    API_COMPILE(System.resetNetworkOnCloudErrorsEnabled());
+    // Generic API
+    API_COMPILE(System.enable(SYSTEM_FLAG_MAX));
+    API_COMPILE(System.disable(SYSTEM_FLAG_MAX));
+    API_COMPILE(System.enabled(SYSTEM_FLAG_MAX));
 }

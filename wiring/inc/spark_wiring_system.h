@@ -261,33 +261,21 @@ public:
 		set_flag(flag, false);
     }
 
-
-    inline void enableResetNetworkOnCloudErrors()
-    {
-        set_flag(SYSTEM_FLAG_RESET_NETWORK_ON_CLOUD_ERRORS, true);
-    }
-
-    inline void disableResetNetworkOnCloudErrors()
-    {
-        set_flag(SYSTEM_FLAG_RESET_NETWORK_ON_CLOUD_ERRORS, false);
-    }
-
-    inline uint8_t resetNetworkOnCloudErrorsEnabled()
-    {
-        return get_flag(SYSTEM_FLAG_RESET_NETWORK_ON_CLOUD_ERRORS) != 0;
+    inline bool enabled(system_flag_t flag) const {
+        return get_flag(flag) != 0;
     }
 
 
 private:
 
-    inline uint8_t get_flag(system_flag_t flag)
+    static inline uint8_t get_flag(system_flag_t flag)
     {
         uint8_t value = 0;
         system_get_flag(flag, &value, nullptr);
         return value;
     }
 
-    inline void set_flag(system_flag_t flag, uint8_t value)
+    static inline void set_flag(system_flag_t flag, uint8_t value)
     {
         system_set_flag(flag, value, nullptr);
     }
